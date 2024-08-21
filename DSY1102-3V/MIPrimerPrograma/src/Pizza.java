@@ -9,11 +9,47 @@
  */
 public class Pizza {
     
-    public  String nombre;
+    private String nombre;
     private String tamaño;
     private String masa;
     
-    //metodos
+    //metodos constructores
+
+    public Pizza() {
+    }
+
+    public Pizza(String nombre, String tamaño, String masa) {
+        this.nombre = nombre;
+        this.tamaño = tamaño;
+        this.masa = masa;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTamaño() {
+        return tamaño;
+    }
+
+    public void setTamaño(String tamaño) {
+        this.tamaño = tamaño;
+    }
+
+    public String getMasa() {
+        return masa;
+    }
+
+    public void setMasa(String masa) {
+        this.masa = masa;
+    }
+    
+     
+    //metodos customer
     public void preparar()
     {
        System.out.println("Preparando " + nombre + " de tamañao " + tamaño);
@@ -26,27 +62,19 @@ public class Pizza {
         
     }
     
-    //método prinicipal de java, el que ejecuta --> main
-    //main + tab
-    public static void main(String[] args) {
+    public String preparar2(String tipoHarina){
         
-        //crear objetos!
-        Pizza pizza1 = new Pizza();
-        pizza1.nombre = "pepperoni";
-        pizza1.tamaño = "grande";
-        pizza1.masa = "gruesa";
-        
-        pizza1.preparar();
-        pizza1.calentar();
-        
-        System.out.println("");
-        Pizza pizza2 = new Pizza();
-        pizza2.nombre = "vegetariana";
-        pizza2.tamaño = "familiar";
-        pizza2.masa = "delgada";
-        
-        pizza2.preparar();
-        pizza2.calentar();
+        String harina = tipoHarina;
+        //double pes = peso;
+        return harina;
     }
+    
+    public int calcular(int num1, int num2)
+    {
+        int suma = num1 + num2;
+        return suma;
+    }
+    
+    
     
 }
