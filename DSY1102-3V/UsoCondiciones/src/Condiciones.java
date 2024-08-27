@@ -17,7 +17,8 @@ public class Condiciones {
     }
 
     public Condiciones(int edad, String nombre) {
-        this.edad = edad;
+        //this.edad = edad;
+        this.setEdad(edad);
         this.nombre = nombre;
     }
 
@@ -26,7 +27,14 @@ public class Condiciones {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+        if (edad >0)
+        {
+            this.edad = edad;
+        }
+        else{
+            System.out.println("La edad debe ser mayor a cero!");
+        }
+        
     }
 
     public String getNombre() {
@@ -37,8 +45,32 @@ public class Condiciones {
         this.nombre = nombre;
     }
 
+    public void pruebaCondiciones()
+    {
+        if (this.edad >= 18)
+        {
+            //sout + tab
+            System.out.println("Ud es mayor de edad");
+            
+        }
+        else
+        {
+            if (this.edad <= 12 && this.getEdad()>=17) {
+                System.out.println("Ud es un joven");
+            }
+            else{
+                System.out.println("Ud es menor de edad, es un niño");
+            } 
+        }
+    }
     
     
+    public static void main(String[] args) {
+        
+        Condiciones con1 = new Condiciones(2, "Juan");
+        con1.pruebaCondiciones();
+        
+    }
     
     
     
