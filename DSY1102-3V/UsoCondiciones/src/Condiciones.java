@@ -55,7 +55,7 @@ public class Condiciones {
         }
         else
         {
-            if (this.edad <= 12 && this.getEdad()>=17) {
+            if (this.edad >= 12 && this.getEdad()<=17) {
                 System.out.println("Ud es un joven");
             }
             else{
@@ -67,9 +67,17 @@ public class Condiciones {
     
     public static void main(String[] args) {
         
-        Condiciones con1 = new Condiciones(2, "Juan");
+        Condiciones con1 = new Condiciones(15, "Juan");
         con1.pruebaCondiciones();
-        
+        System.out.println(con1.getEdad());
+        con1.setEdad(4);
+        con1.pruebaCondiciones();
+        System.out.println(con1.getEdad());
+        con1.setEdad(56);
+        con1.pruebaCondiciones();
+        System.out.println(con1.getEdad());
+        con1.setNombre("Maria");
+        System.out.println(con1.getNombre());
     }
     
     
