@@ -72,6 +72,13 @@ public class Auto {
         return "Auto{" + "marca=" + marca + ", modelo=" + modelo + ", tipoCombustible=" + tipoCombustible + ", a\u00f1o=" + año + ", cilindrada=" + cilindrada + '}';
     }
 
+    public void imprimirAuto()
+    {
+        System.out.println("Modelo: " + this.getModelo());
+        System.out.println("Marca: " + this.getMarca());
+        System.out.println("Tipo Combustible: " + this.getTipoCombustible());
+    }
+
     
     
     

@@ -16,6 +16,16 @@ public class AutoPpal {
         System.out.println(objAuto.getMarca());
         System.out.println(objAuto.getModelo());
         
+        System.out.println("*************************");
+         
+        Auto objAuto3 = new Auto();
+        objAuto3.setMarca("KIA");
+        objAuto3.setModelo("SORENTO");
+        System.out.println(objAuto3.toString());
+        objAuto3.imprimirAuto();
+        System.out.println("*************************");
+        
+        
         Auto objAuto2 = new Auto("KIA", "Morning", "Bencina", 2022, 1500);
         System.out.println(objAuto2.getMarca());
         System.out.println(objAuto2.getModelo());
