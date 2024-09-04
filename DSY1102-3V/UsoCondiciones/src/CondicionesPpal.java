@@ -10,7 +10,8 @@ public class CondicionesPpal {
     public static void main(String[] args) {
         
         int edad,opcion;
-        String nombre,resp;
+        String nombre;
+        char resp; // 's' o 'n' 
         Scanner leer = new Scanner(System.in);
         Condiciones con1 = new Condiciones();
 //        Condiciones con1 = new Condiciones(15, "Juan");
@@ -29,8 +30,9 @@ public class CondicionesPpal {
 //        System.out.println("");
 //        System.out.println("***********");
           
-        resp = "s";    
-        while (resp.equals("s")) {
+        resp = 's';    
+        //while (resp.equalsIgnoreCase("s")) {
+        while (resp == 's') {
             System.out.println("------MENU-------");
             System.out.println("1. Ingrese datos");
             System.out.println("2. Muestre datos");
@@ -65,7 +67,7 @@ public class CondicionesPpal {
                 }
             }
             System.out.println("Deseas ingresar nuevamente? (s/n)");
-            resp = leer.next();
+            resp = leer.next().charAt(0);
         }
 
         
